@@ -12,7 +12,7 @@ dotenv.config({ path: './backend/.env' });
 const app = express();
 
 const allowedOrigins = [
-    'client-stickynotes-production.up.railway.app',
+    'https://client-stickynotes-production.up.railway.app',
     'http://localhost:5173',
 ]
 app.use(cors({
