@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 
-import NotesPage from './notes/NotesPage.jsx';
+import NotesPage from './notes/notesPage.jsx';
 
 // Context Provider
 import { TagsProvider } from "./notes/resources/TagsContext";
