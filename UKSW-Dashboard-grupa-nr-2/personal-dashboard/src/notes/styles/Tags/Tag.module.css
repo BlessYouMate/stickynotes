@@ -1,0 +1,152 @@
+/* 
+
+CHECKBOX    
+
+*/
+
+/* Hide the native checkbox */
+.checkbox {
+    display: none;
+}
+
+/* Style the custom checkbox via the label */
+.checkboxLabel {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; /* Space for the custom checkbox */
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* Add the custom checkbox "box" */
+.checkboxLabel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(0, 0, 0); /* Border color for the custom checkbox */
+    border-radius: 25%; /* Make it rounded */
+    background-color: rgb(199, 196, 196);
+}
+
+/* Add a checkmark when the input is checked */
+.checkbox:checked + .checkboxLabel::before {
+    background-color: rgb(134, 213, 134);
+    border-color: rgb(79, 177, 79);
+}
+
+.checkbox:checked + .checkboxLabel::after {
+    content: "\2713";
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(36, 97, 36);
+}
+
+/* 
+
+BUTTONS
+
+*/
+
+.delete_btn, .edit_btn, .save_btn, .cancel_btn{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 2px;
+}
+
+/*  */
+
+.delete_btn{
+    border: 1px solid red !important; /* Remove the default border */
+    background-color: rgb(56, 56, 56) !important;
+}
+
+.delete_btn:hover {
+    background-color: rgb(108, 108, 108) !important; 
+    transition: background-color 0.3s ease;
+}
+
+/*  */
+
+.edit_btn{
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: rgb(21, 196, 147) !important;
+}
+
+.edit_btn:hover {
+    background-color: rgb(24, 222, 166) !important; 
+    transition: background-color 0.3s ease;
+}
+
+/*  */
+
+.save_btn{
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: rgb(16, 173, 68) !important;
+    transition: background-color 0.3s ease;
+}
+
+.save_btn:hover {
+    background-color: rgb(21, 206, 83) !important; 
+    transition: background-color 0.3s ease;
+}
+
+/*  */
+
+.cancel_btn{
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: rgb(227, 31, 31) !important;
+    transition: background-color 0.3s ease;
+}
+
+.cancel_btn:hover {
+    background-color: rgb(255, 45, 45) !important; 
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+/* 
+
+ICONS
+
+*/
+
+
+.delete_icon{
+    color: red;
+}
+
+.edit_icon{
+    color: black;
+}
+
+.save_icon{
+    color: rgb(246, 244, 231); 
+}
+
+.cancel_icon{
+    background-color: rgb(227, 31, 31);
+}
+
+
+/* 
+
+?
+
+*/
+
+.colorAndButtons{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+

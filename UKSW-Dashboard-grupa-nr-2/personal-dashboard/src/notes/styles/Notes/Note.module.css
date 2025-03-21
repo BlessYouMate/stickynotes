@@ -1,0 +1,207 @@
+.note{
+    z-index: 1;
+    box-shadow: inset 0 -40px 40px rgba(0, 0, 0, 0.2),
+        inset 0 25px 10px rgba(0, 0, 0, 0.2), 0 5px 6px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    margin: 10px;
+}
+
+.note_title, .note_description{
+    background-color: rgb(239, 205, 69);
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    resize: none;
+    border: none;
+}
+
+.view_btns{
+    background-color: rgb(239, 205, 69);
+    display: flex;
+    justify-content: space-evenly;
+    background-size: 150px;
+}
+
+.view_btns Button{
+    flex: 1;
+}
+
+.edit_btns{
+    background-color: rgb(239, 205, 69);
+    display: flex;
+    justify-content: space-evenly;
+    background-size: 150px;
+}
+
+.edit_btns Button{
+    flex: 1;
+}
+
+
+/* 
+
+DELETE BUTTON
+
+*/
+
+.icon_trash {
+    color: red; 
+    font-size: 20px; 
+    background-color: rgb(56, 56, 56);
+    transition: background-color 0.3s ease;
+}
+
+.del_btn{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px solid red !important; 
+    background-color: rgb(56, 56, 56) !important;
+    transition: background-color 0.3s ease;
+}
+
+.del_btn:hover {
+    background-color: rgb(108, 108, 108) !important; 
+    transition: background-color 0.3s ease;
+}
+
+.del_btn:hover i {
+    background-color: rgb(108, 108, 108) !important; 
+    transition: background-color 0.3s ease;
+}
+
+/* 
+
+EDIT BUTTON
+
+*/
+
+.icon_edit{
+    color: rgb(0, 0, 0); 
+    font-size: 20px; 
+    background-color: rgb(21, 196, 147);
+    transition: background-color 0.3s ease;
+}
+
+
+.edit_btn{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: rgb(21, 196, 147) !important;
+    transition: background-color 0.3s ease;
+}
+
+.edit_btn:hover {
+    background-color: rgb(24, 222, 166) !important; 
+    transition: background-color 0.3s ease;
+}
+
+.edit_btn:hover i {
+    background-color: rgb(24, 222, 166) !important; 
+    transition: background-color 0.3s ease;
+}
+
+/* 
+
+SAVE BUTTON
+
+*/
+
+.icon_save{
+    color: rgb(246, 244, 231); 
+    font-size: 20px; 
+    background-color: rgb(16, 173, 68);
+    transition: background-color 0.3s ease;
+}
+
+
+.save_btn{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px solid rgb(255, 255, 255) !important;
+    background-color: rgb(16, 173, 68) !important;
+    transition: background-color 0.3s ease;
+}
+
+.save_btn:hover {
+    background-color: rgb(21, 206, 83) !important; 
+    transition: background-color 0.3s ease;
+}
+
+.save_btn:hover i {
+    background-color: rgb(21, 206, 83) !important; 
+    transition: background-color 0.3s ease;
+}
+
+
+/* 
+
+CANCEL BUTTON
+
+*/
+
+.icon_cancel{
+    color: rgb(0, 0, 0); 
+    font-size: 20px; 
+    background-color: rgb(227, 31, 31);
+    transition: background-color 0.3s ease;
+}
+
+
+.cancel_btn{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: rgb(227, 31, 31) !important;
+    transition: background-color 0.3s ease;
+}
+
+.cancel_btn:hover {
+    background-color: rgb(255, 45, 45) !important; 
+    transition: background-color 0.3s ease;
+}
+
+.cancel_btn:hover i {
+    background-color: rgb(255, 45, 45) !important; 
+    transition: background-color 0.3s ease;
+}
+
+
+/* 
+
+TAG
+
+*/
+
+.tag_indication_container{
+    background-color:  rgb(239, 205, 69);
+    width: auto;
+    height: 25px;
+    align-content: center;
+}
+
+.tag_indication{
+    width: auto;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.tag_indication_edit {
+    width: calc(100% - 10px); /* Full width minus combined left and right margins */
+    height: 18px; /* Desired height */
+    margin: 0 5px; /* Set margins (left and right) */
+    border-radius: 5px; /* Optional: Keep the rounded corners */
+}

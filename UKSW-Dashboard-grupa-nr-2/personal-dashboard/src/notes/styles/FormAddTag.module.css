@@ -1,0 +1,52 @@
+.createTagContainer{
+    margin-left: 2vw;
+    margin-bottom: 2vw;
+}
+
+h1{
+    -webkit-text-stroke-color: rgb(161, 167, 181);
+    -webkit-text-stroke-width: 1px;
+}
+
+label{
+    font-size: 22px;
+}
+
+input::placeholder{
+    color: rgb(185, 184, 184);
+}
+
+
+/* 
+
+BUTTONS
+
+*/
+
+.form_btns{
+    display: flex;
+    gap: 1vw;
+}
+
+.create_btn{
+    color: black !important;
+    font-weight: 500 !important;
+    background-color: rgb(129, 215, 1) !important;
+    border: 1px solid black !important;
+}
+
+.create_btn:hover{
+    background-color: rgb(163, 255, 25) !important;
+}
+
+
+.cancel_btn{
+    color: rgb(234, 22, 22) !important;
+    font-weight: 500 !important;
+    background-color: rgb(31, 30, 30) !important;
+    border: 1px solid rgb(234, 22, 22) !important;
+}
+
+.cancel_btn:hover{
+    background-color: rgb(82, 80, 80) !important;
+}

@@ -1,0 +1,221 @@
+/* 
+
+TAG BUTTON
+
+*/
+
+.showTagsBtn{
+    margin: 1vw;
+    margin-right: 4vw;
+    background-color: rgb(228, 101, 47);
+    border: 2px solid rgb(209, 51, 51);
+    position: relative;
+    z-index: 999;
+}
+
+.showTagsBtn:hover{
+    background-color: rgb(252, 117, 59);
+}
+
+.showTagsBtn:active {
+    background-color: rgb(228, 101, 47) !important; 
+    border-color: rgb(209, 51, 51) !important; 
+}
+
+
+/* 
+
+TAGS LIST
+
+*/
+
+
+.tags_list {
+    position: fixed; /* Ensures it stays anchored to the viewport */
+    top: 0;
+    right: 0; /* Aligns to the right edge of the viewport */
+    width: 450px; /* Adjust as needed */
+    height: 100vh; /* Full height */
+    background-color: rgba(255, 255, 255, 0.501);
+    z-index: 1000;
+    transform: translateX(100%); /* Hidden off-screen */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+
+    color: black;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.tags_list.show {
+    transform: translateX(0); /* Slides into view */
+    opacity: 1; /* Fully visible */
+}
+
+
+.tags_list ul{
+    list-style: none;
+    padding: 2vh;
+
+    overflow-y: auto;
+     
+}
+
+.tags_list li{
+    padding: 0.3vw;
+    margin: 5px;
+    border: 2px solid rgba(30, 30, 30, 0.714);
+    border-radius: 5px;
+    background-color: aliceblue;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox:checked ~ .checkboxLabel{
+    color: rgb(5, 139, 5);
+}
+
+/* 
+
+CHECKBOX    
+
+*/
+
+/* Hide the native checkbox */
+.checkbox {
+    display: none;
+}
+
+/* Style the custom checkbox via the label */
+.checkboxLabel {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; /* Space for the custom checkbox */
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+/* Add the custom checkbox "box" */
+.checkboxLabel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(0, 0, 0); /* Border color for the custom checkbox */
+    border-radius: 25%; /* Make it rounded */
+    background-color: rgb(199, 196, 196);
+}
+
+/* Add a checkmark when the input is checked */
+.checkbox:checked + .checkboxLabel::before {
+    background-color: rgb(134, 213, 134);
+    border-color: rgb(79, 177, 79);
+}
+
+.checkbox:checked + .checkboxLabel::after {
+    content: "\2713";
+    position: absolute;
+    left: 3px;
+    top: 0px;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(36, 97, 36);
+}
+
+/* 
+
+BUTTONS
+
+*/
+
+.close_btn{
+    margin: 20px;
+    background-color: rgb(228, 101, 47);
+    border: none !important;
+}
+
+.close_btn:hover {
+    background-color: rgb(252, 133, 59);
+    transition: background-color 0.3s ease;
+}
+
+.close_btn:active {
+    background-color: rgb(228, 101, 47) !important; 
+}
+
+.add_btn{
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    background-color: rgb(1, 52, 255);
+    border: none !important;
+}
+
+.add_btn:hover{
+    background-color: rgb(34, 178, 255);
+    transition: background-color 0.3s ease;
+}
+
+.delete_btn, .edit_btn{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 2px;
+}
+
+.delete_btn{
+    border: 1px solid red !important; /* Remove the default border */
+    background-color: rgb(56, 56, 56) !important;
+}
+
+.delete_btn:hover {
+    background-color: rgb(108, 108, 108) !important; 
+    transition: background-color 0.3s ease;
+}
+
+.edit_btn{
+    border: 1px solid rgb(0, 0, 0) !important;
+    background-color: rgb(21, 196, 147) !important;
+}
+
+.edit_btn:hover {
+    background-color: rgb(24, 222, 166) !important; 
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* 
+
+ICONS
+
+*/
+
+
+.delete_icon{
+    color: red;
+}
+
+.edit_icon{
+    color: black;
+}
+
+
+/* 
+
+?
+
+*/
+
+.colorAndButtons{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}

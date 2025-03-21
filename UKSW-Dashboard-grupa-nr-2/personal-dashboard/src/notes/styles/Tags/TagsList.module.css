@@ -1,0 +1,134 @@
+/* 
+
+TAG BUTTON
+
+*/
+
+.showTagsBtn{
+    margin: 1vw;
+    margin-right: 4vw;
+    background-color: rgb(228, 101, 47);
+    border: 2px solid rgb(209, 51, 51);
+    position: relative;
+    z-index: 999;
+}
+
+.showTagsBtn:hover{
+    background-color: rgb(252, 117, 59);
+}
+
+.showTagsBtn:active {
+    background-color: rgb(228, 101, 47) !important; 
+    border-color: rgb(209, 51, 51) !important; 
+}
+
+/* 
+
+BUTTONS
+
+*/
+
+.close_btn{
+    margin: 20px;
+    background-color: rgb(228, 101, 47);
+    border: none;
+    transition: background-color 1s ease;
+}
+
+.close_btn:hover {
+    background-color: rgb(252, 133, 59);
+    transition: background-color 1s ease;
+}
+
+.close_btn:active {
+    background-color: rgb(228, 101, 47) !important; 
+}
+
+.add_btn{
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    background-color: rgb(1, 52, 255);
+    border: none;
+
+    transition: background-color 1s ease;
+}
+
+.add_btn:hover{
+    background-color: rgb(56, 136, 255);
+    transition: background-color 1s ease;
+}
+
+.tags_filter_btn{
+    margin: 20px;
+    background-color: rgb(114, 37, 185);
+    border: none;
+
+    transition: background-color 1s ease;
+}
+
+.tags_filter_btn:hover{
+    margin: 20px;
+    background-color: rgb(129, 42, 209);
+    border: none;
+
+    transition: background-color 1s ease;
+}
+
+
+/* 
+
+TAGS LIST
+
+*/
+
+
+.tags_list {
+    position: fixed; /* Ensures it stays anchored to the viewport */
+    top: 0;
+    right: 0; /* Aligns to the right edge of the viewport */
+    width: 450px; /* Adjust as needed */
+    height: 100vh; /* Full height */
+    background-color: rgba(255, 255, 255, 0.501);
+    z-index: 1000;
+    transform: translateX(100%); /* Hidden off-screen */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Initially hidden */
+
+    color: black;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.tags_list.show {
+    transform: translateX(0); /* Slides into view */
+    opacity: 1; /* Fully visible */
+}
+
+
+.tags_list ul{
+    list-style: none;
+    padding: 2vh;
+
+    overflow-y: auto;
+     
+}
+
+.tags_list li{
+    padding: 0.3vw;
+    margin: 5px;
+    border: 2px solid rgba(30, 30, 30, 0.714);
+    border-radius: 5px;
+    background-color: aliceblue;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox:checked ~ .checkboxLabel{
+    color: rgb(5, 139, 5);
+}
+

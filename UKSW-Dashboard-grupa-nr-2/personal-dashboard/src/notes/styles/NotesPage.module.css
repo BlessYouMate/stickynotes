@@ -1,0 +1,65 @@
+.background {
+    background-color: rgb(15, 94, 59) !important; /* Ensures it overrides Bootstrap */
+    min-height: 100vh; /* Ensures it covers the full viewport height */
+    width: 100%; /* Covers the full width of the viewport */
+    display: flex; /* To support flexible layout for child elements */
+    flex-direction: column; /* Ensures children stack vertically */
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    align-self: flex-start;
+}
+
+
+/* 
+
+BUTTONS
+
+*/
+
+/* 
+
+HOMEPAGE BUTTON
+
+*/
+
+.homepage_btn{
+    position: relative;
+    z-index: 999;
+    background-color: cornflowerblue !important;
+    border: 3px solid blue !important;
+    margin: 1vw;
+}
+
+.homepage_btn i {
+    background-color: cornflowerblue !important;
+    font-size: 25px;
+}
+
+/* 
+
+ADD NOTE BUTTON
+
+*/
+
+.add_note_btn{
+    position: relative;
+    z-index: 999;
+    background-color: rgb(100, 237, 121) !important;
+    border: 3px solid rgb(3, 167, 3) !important;
+    color: black !important;
+    margin: 1vw;
+    
+}
+
+.add_note_btn i {
+    background-color: rgb(100, 237, 121) !important;
+    font-size: 25px;
+}
