@@ -29,7 +29,7 @@ export function NotesProvider({ children }) {
 
     const fetchNotes = useCallback(async () => {
         try {
-            const response = await fetch('http://localhost:5000/notes', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/notes`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,

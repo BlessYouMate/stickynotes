@@ -14,7 +14,7 @@ import {
 
 const tagsToNull = async (noteId) => {
     const nullValue = null
-    const response = await fetch('http://localhost:5000/notes/edit/tag', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/notes/edit/tag`, {
     method: 'PUT',
     headers: {
         'Content-Type': 'application/json',

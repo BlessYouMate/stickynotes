@@ -15,7 +15,7 @@ export const handleDelete = async (tagId, deleteTag, notes, tagsToNull) => {
       );
 
       // Proceed to delete the tag only after all updates are successful
-      const response = await fetch('http://localhost:5000/tags/', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/tags/`, {
           method: 'DELETE',
           headers: {
               'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export const handleDelete = async (tagId, deleteTag, notes, tagsToNull) => {
 
 
   export const handleSaveTagName = async (tagId, newTag) => {
-    const response = await fetch('http://localhost:5000/tags/edit/tag', {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/tags/edit/tag`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ export const handleDelete = async (tagId, deleteTag, notes, tagsToNull) => {
 
 
 export const handleSaveTagColor = async (tagId, newColor) => {
-  const response = await fetch('http://localhost:5000/tags/edit/color', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/tags/edit/color`, {
       method: 'PUT',
       headers: {
           'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ export const handleSaveTagColor = async (tagId, newColor) => {
 }
 
 export const handleChangeTagState = async (tagId) => {
-            const response = await fetch('http://localhost:5000/tags/edit/isChecked', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/tags/edit/isChecked`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ export default function FormAddTag({ closeForm, addTag}){
     const [color, setColor] = useState(generateRandomColor());
 
     const handleSumbit = async () => {
-        const response = await fetch('http://localhost:5000/tags/', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/tags/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

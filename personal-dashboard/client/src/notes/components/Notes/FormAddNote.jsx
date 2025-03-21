@@ -23,7 +23,7 @@ export default function FormAddNote({ closeForm}){
         const tagValue = tagId === "null" ? null : parseInt(tagId, 10); 
         const selectedTag = tags.find((tag) => tag.tagId == tagValue);
     
-        const response = await fetch('http://localhost:5000/notes', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/notes`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

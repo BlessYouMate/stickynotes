@@ -37,7 +37,7 @@ export function TagsProvider({ children }) {
 
       const fetchTags = useCallback(async () => {
         try {
-            const response = await fetch('http://localhost:5000/tags/', {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/tags/`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`, 

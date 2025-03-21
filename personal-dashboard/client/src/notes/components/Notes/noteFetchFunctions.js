@@ -1,5 +1,5 @@
 export const handleSaveTitle = async (noteId, newTitle) => {
-  const response = await fetch('http://localhost:5000/notes/edit/title', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/notes/edit/title`, {
       method: 'PUT',
       headers: {
           'Content-Type': 'application/json',
@@ -18,7 +18,7 @@ export const handleSaveTitle = async (noteId, newTitle) => {
 }
 
 export const handleSaveDescription = async (noteId, description) => {
-  const response = await fetch('http://localhost:5000/notes/edit/desc', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/notes/edit/desc`, {
       method: 'PUT',
       headers: {
           'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ export const handleSaveTag = async (noteId, newTagID) => {
   if(newTagID == ""){
     newTagID = null
   }
-  const response = await fetch('http://localhost:5000/notes/edit/tag', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/notes/edit/tag`, {
   method: 'PUT',
   headers: {
       'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ return true
 }
 
 export const handleDelete = async (noteId, deleteNote) => {
-  const response = await fetch('http://localhost:5000/notes', {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/notes`, {
       method: 'DELETE',
       headers: {
           'Content-Type': 'application/json',
